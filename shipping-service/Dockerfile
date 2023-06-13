@@ -1,14 +1,20 @@
 # import node v14 on alpine
-FROM node:14-alpine
+FROM node:14-alpine as builder
+
+# deklarasi workdir
+WORKDIR /app
 
 # copy semua file ke workdir
+COPY package*.json ./
+
+# install dependencies yang dibutuhkan
+RUN npm install
+
+# copy semua file ke .
 COPY . .
 
 # deklarasi environtment yang dibutuhkan
 ENV PORT=3001
-
-# install dependencies yang dibutuhkan
-RUN npm install --production --unsafe-perm
 
 # expose port 3001
 EXPOSE 3001
