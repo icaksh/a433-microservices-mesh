@@ -28,9 +28,9 @@ jobs:
       matrix:
         include:
           - dockerfile: ./order-service/Dockerfile
-            image: ghcr.io/icaksh/order-service:latest
+            image: ghcr.io/icaksh/order-service
           - dockerfile: ./shipping-service/Dockerfile
-            image: ghcr.io/icaksh/shipping-service:latest
+            image: ghcr.io/icaksh/shipping-service
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
