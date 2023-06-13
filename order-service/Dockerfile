@@ -1,10 +1,7 @@
 # import node v14 on alpine
 FROM node:14-alpine
 
-# deklarasikan workdir ke /app
-WORKDIR /app
-
-# copy semua file ke workdir
+# copy semua file ke container
 COPY . .
 
 # deklarasi environtment yang dibutuhkan

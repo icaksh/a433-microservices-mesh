@@ -31,7 +31,7 @@ spec:
       containers:
         - name: order
           # ambil image dari ghcrku
-          image: ghcr.io/icaksh/order-service:latest
+          image: ghcr.io/icaksh/order-service:master
           # deklarasikan port yang akan digunakan
           ports:
             - containerPort: 3001
@@ -39,6 +39,6 @@ spec:
           env:
             # port yang akan dijalankan oleh node
             - name: PORT
-              value: 3001
+              value: "3001"
             - name: AMQP_URL
               value: "amqp://rabbitmq.default.svc.cluster.local:5672"

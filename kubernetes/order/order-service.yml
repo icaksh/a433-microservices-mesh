@@ -20,7 +20,7 @@ spec:
   - name: default
     port: 3000
     protocol: TCP
-    nodePort: 33000
+    nodePort: 30000
   # tentukan selector
   selector:
     app: e-commerce
