@@ -72,13 +72,13 @@ jobs:
 workflows:
   order-service-workflow:
     jobs:
-      - lint-backend-dockerfile
+      - lint-order-service-dockerfile
       - build-app-order-service:
           requires: 
             - lint-backend-dockerfile
-  shipping-sercie-workflow:
+  shipping-service-workflow:
     jobs:
-      - lint-frontend-dockerfile
-      - build-app-order-service:
+      - lint-shipping-service-dockerfile
+      - build-app-shipping-service:
           requires: 
-            - lint-frontend-dockerfile
+            - lint-shipping-service-dockerfile
