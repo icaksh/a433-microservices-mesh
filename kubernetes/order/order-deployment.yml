@@ -23,12 +23,16 @@ spec:
       app: e-commerce
       tier: services
   template:
+    # tambahkan metada
     metadata:
+      # tambahkan label
       labels:
         app: e-commerce
         tier: services
     spec:
+      # bagian container
       containers:
+        # nama kontainer
         - name: order
           # ambil image dari ghcrku
           image: ghcr.io/icaksh/order-service:latest
@@ -40,5 +44,6 @@ spec:
             # port yang akan dijalankan oleh node
             - name: PORT
               value: "3000"
+            # url amqp, dari sisi helm tidak dapat diakses tanpa user pass sehingga ditambahkan userpass
             - name: AMQP_URL
-              value: "amqp://rabbitmq.default.svc.cluster.local:5672"
+              value: "amqp://user:pLbxc4E2N1@rabbitmq.default.svc.cluster.local:5672/"
