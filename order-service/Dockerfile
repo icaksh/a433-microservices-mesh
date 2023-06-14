@@ -11,10 +11,10 @@ COPY . .
 RUN npm install
 
 # deklarasi environtment yang dibutuhkan
-ENV PORT=3001
+ENV PORT=3000
 
 # expose port 3001
-EXPOSE 3001
+EXPOSE 3000
 
 # run npm start jika kontainer diluncurkan
 CMD ["npm","start"]

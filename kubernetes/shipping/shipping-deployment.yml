@@ -17,7 +17,7 @@ metadata:
 spec:
   # buat replica 1
   replicas: 1
-  # select matchlabels ke karsajobs
+  # select matchlabels ke e-commerce
   selector:
     matchLabels:
       app: e-commerce
@@ -29,9 +29,9 @@ spec:
         tier: services
     spec:
       containers:
-        - name: order
+        - name: shipping
           # ambil image dari ghcrku
-          image: ghcr.io/icaksh/order-service:master
+          image: ghcr.io/icaksh/shipping-service:latest
           # deklarasikan port yang akan digunakan
           ports:
             - containerPort: 3001
