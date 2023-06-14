@@ -5,13 +5,10 @@ FROM node:14-alpine as builder
 WORKDIR /app
 
 # copy semua file ke workdir
-COPY package*.json ./
+COPY . .
 
 # install dependencies yang dibutuhkan
 RUN npm install
-
-# copy semua file ke .
-COPY . .
 
 # deklarasi environtment yang dibutuhkan
 ENV PORT=3001
